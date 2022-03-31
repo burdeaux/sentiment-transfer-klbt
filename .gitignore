@@ -1,0 +1,3 @@
+*.pyc
+data/yelp_long/train.txt
+data/yelp_long/train.attr

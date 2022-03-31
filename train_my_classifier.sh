@@ -1,0 +1,1 @@
+CUDA_VISIBLE_DEVICES=0 bash scripts/train_classifier.sh
