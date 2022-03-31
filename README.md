@@ -25,23 +25,23 @@ This approach requires pretrained LMs as priors for each domain during traininin
 
 Download pretrained lms (located in folder `./pretrained_lm`):
 ```
-python scripts/prepare_lm.py --dataset [yelp|shakespeare|decipher|sr_bos]
+python scripts/prepare_lm.py --dataset yelp
 ```
 
 Download pretrained classifiers (located in folder `./pretrained_classifer`):
 ```
-python scripts/prepare_classifier.py --dataset [yelp|shakespeare|decipher|sr_bos]
+python scripts/prepare_classifier.py --dataset yelp
 ```
 
 ## Usage
 Training:
 ```
-CUDA_VISIBLE_DEVICES=xx bash scripts/[dataset]/train_[dataset].sh
+CUDA_VISIBLE_DEVICES=xx bash scripts/yelp/train_yelp.sh
 ```
 
 Eval:
 ```
-CUDA_VISIBLE_DEVICES=xx bash scripts/[dataset]/eval_all.sh [model dir]
+CUDA_VISIBLE_DEVICES=xx bash scripts/yelp/eval_all.sh [model dir]
 ```
 
 The evaluation command will report several evaluation metrics (e.g. accuracy, self-bleu, reference bleu, and ppl for sentiment transfer task) and also transfer the test sentences to another domain, transferred test sentences are saved in `[model dir]`.
